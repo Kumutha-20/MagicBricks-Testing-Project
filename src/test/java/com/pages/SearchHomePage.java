@@ -32,6 +32,10 @@ public class SearchHomePage {
     // Enter location
     public boolean enterLocation(String location) {
         try {
+          	WebElement defaultlocation = wait.until(ExpectedConditions.elementToBeClickable(Locators.defaultLocation));
+            defaultlocation.click();
+            WebElement closedefault = wait.until(ExpectedConditions.elementToBeClickable(Locators.closedefault));
+            closedefault.click();
             WebElement locationBox = wait.until(ExpectedConditions.elementToBeClickable(Locators.enterlocation));
             locationBox.clear();
             locationBox.sendKeys(location);
@@ -43,16 +47,28 @@ public class SearchHomePage {
         }
     }
 
-    // Select property type
-    public boolean selectPropertyType(String propertyType) {
+ // Select property type with clear/deselect first
+    public boolean selectPropertyType() {
         try {
             WebElement dropdown = wait.until(ExpectedConditions.elementToBeClickable(Locators.clickPropertType));
             dropdown.click();
 
+            // First try to clear/deselect all (if available)
+            try {
+                WebElement clearOption = wait.until(ExpectedConditions.elementToBeClickable(Locators.clearPropertyType));
+                ((JavascriptExecutor) driver).executeScript("arguments[0].click();", clearOption);
+                Reporter.generateReport(driver, extTest, Status.INFO, "Cleared existing property type selection");
+            } catch (TimeoutException te) {
+                Reporter.generateReport(driver, extTest, Status.INFO, "No clear option available, continuing...");
+            }
+
+            // Now select the new option
             WebElement option = wait.until(ExpectedConditions.elementToBeClickable(Locators.selectPropertyType));
             ((JavascriptExecutor) driver).executeScript("arguments[0].click();", option);
+            WebElement close = wait.until(ExpectedConditions.elementToBeClickable(Locators.closePropertyType));
+            close.click();
 
-            Reporter.generateReport(driver, extTest, Status.PASS, "Selected property type: " + propertyType);
+            Reporter.generateReport(driver, extTest, Status.PASS, "Selected property type");
             return true;
         } catch (Exception e) {
             Reporter.generateReport(driver, extTest, Status.FAIL, "Failed to select property type: " + e.getMessage());
@@ -63,21 +79,23 @@ public class SearchHomePage {
     // Select budget
     public boolean selectBudget() {
         try {
-            // Click on budget dropdown
-            //WebElement budgetDropdown = wait.until(ExpectedConditions.elementToBeClickable(Locators.clickBudget));
-            //budgetDropdown.click();
-
             // Expand dropdown section if needed
-            WebElement dropdownSection = wait.until(ExpectedConditions.visibilityOfElementLocated(Locators.dropdownBudget));
-            ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", dropdownSection);
+            WebElement dropdownSection = wait.until(ExpectedConditions.elementToBeClickable(Locators.clickBudget));
+            ((JavascriptExecutor) driver).executeScript("arguments[0].click();", dropdownSection);
+            
+            //Min dropdown
+            WebElement minOption = wait.until(ExpectedConditions.elementToBeClickable(Locators.mindropdown));
+            //minOption.clear();              
+            minOption.sendKeys("500000");
+            minOption.click();
 
-            // Select Min Price
-            WebElement minOption = wait.until(ExpectedConditions.elementToBeClickable(Locators.minPrice));
-            ((JavascriptExecutor) driver).executeScript("arguments[0].click();", minOption);
-
-            // Select Max Price
-            WebElement maxOption = wait.until(ExpectedConditions.elementToBeClickable(Locators.maxPrice));
-            ((JavascriptExecutor) driver).executeScript("arguments[0].click();", maxOption);
+            //Min dropdown
+            WebElement maxOption = wait.until(ExpectedConditions.elementToBeClickable(Locators.maxdropdown));
+            //maxOption.clear();              
+            maxOption.sendKeys("15000000");
+            maxOption.click();
+            WebElement closeOption = wait.until(ExpectedConditions.elementToBeClickable(Locators.closeBudget));
+            closeOption.click();
 
             Reporter.generateReport(driver, extTest, Status.PASS,
                     "Selected Budget successfully using dropdown (Min & Max)");
@@ -88,7 +106,6 @@ public class SearchHomePage {
             return false;
         }
     }
-
     // Click search
     public boolean clickSearch() {
         try {

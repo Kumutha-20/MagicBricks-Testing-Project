@@ -18,7 +18,7 @@ public class Reporter {
 
     public static void generateReport(WebDriver driver, ExtentTest extTest, Status status, String stepMessage) {
         if (extTest == null) {
-            System.out.println("⚠️ ExtentTest object is null. Skipping report logging.");
+            System.out.println("ExtentTest object is null. Skipping report logging.");
             return;
         }
 
