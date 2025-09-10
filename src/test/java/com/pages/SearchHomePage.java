@@ -32,10 +32,10 @@ public class SearchHomePage {
     // Enter location
     public boolean enterLocation(String location) {
         try {
-          	/*WebElement defaultlocation = wait.until(ExpectedConditions.elementToBeClickable(Locators.defaultLocation));
+          	WebElement defaultlocation = wait.until(ExpectedConditions.elementToBeClickable(Locators.defaultLocation));
             defaultlocation.click();
             WebElement closedefault = wait.until(ExpectedConditions.elementToBeClickable(Locators.closedefault));
-            closedefault.click();*/ 
+            closedefault.click();
             WebElement locationBox = wait.until(ExpectedConditions.elementToBeClickable(Locators.enterlocation));
             locationBox.clear();
             locationBox.sendKeys(location);

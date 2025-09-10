@@ -1,3 +1,5 @@
+@order2
+
 Feature: Magicbricks Property Search
 
   Scenario Outline: Search and validate property listings by location

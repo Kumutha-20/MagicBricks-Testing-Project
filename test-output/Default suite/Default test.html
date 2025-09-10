@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>Default test</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>3/1/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>2/3/0</td>
 </tr><tr>
-<td>Started on:</td><td>Wed Sep 10 14:29:51 IST 2025</td>
+<td>Started on:</td><td>Wed Sep 10 23:18:11 IST 2025</td>
 </tr>
-<tr><td>Total time:</td><td>111 seconds (111237 ms)</td>
+<tr><td>Total time:</td><td>136 seconds (136127 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -76,20 +76,56 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
+<td title='com.runner.TestRunnerTestNG.runScenario()'><b>runScenario</b><br>Test class: com.runner.TestRunnerTestNG<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Go back to home page and search Premium Homes", "Magicbricks Premium Homes Search"</td>
+<td><div><pre>java.lang.AssertionError: Failed to navigate back to home page. expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1590)
+	at org.testng.Assert.assertTrue(Assert.java:57)
+	at com.stepDefinition.searchPremiumHome.the_user_navigates_back_to_the_home_page(searchPremiumHome.java:29)
+	at ✽.the user navigates back to the home page(file:///C:/Users/vijay/eclipse-workspace/magicbricks_website_testing/src/test/resources/Feartures/searchPremiumHome.feature:7)
+</pre></div><a href='#' onClick='toggleBox("stack-trace245703044", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace245703044'><pre>java.lang.AssertionError: Failed to navigate back to home page. expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1590)
+	at org.testng.Assert.assertTrue(Assert.java:57)
+	at com.stepDefinition.searchPremiumHome.the_user_navigates_back_to_the_home_page(searchPremiumHome.java:29)
+	at ✽.the user navigates back to the home page(file:///C:/Users/vijay/eclipse-workspace/magicbricks_website_testing/src/test/resources/Feartures/searchPremiumHome.feature:7)
+</pre></div></td>
+<td>16</td>
+<td>com.runner.TestRunnerTestNG@24313fcc</td></tr>
+<tr>
+<td title='com.runner.TestRunnerTestNG.runScenario()'><b>runScenario</b><br>Test class: com.runner.TestRunnerTestNG<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Search and validate property listings by location", "Magicbricks Property Search"</td>
+<td><div><pre>java.lang.AssertionError: User not redirected to listing page or Sort By dropdown not visible expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1590)
+	at org.testng.Assert.assertTrue(Assert.java:57)
+	at com.stepDefinition.searchHome.the_user_should_be_redirected_to_the_property_listing_page(searchHome.java:53)
+	at ✽.the user should be redirected to the property listing page(file:///C:/Users/vijay/eclipse-workspace/magicbricks_website_testing/src/test/resources/Feartures/searchHome.feature:11)
+</pre></div><a href='#' onClick='toggleBox("stack-trace2122267901", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace2122267901'><pre>java.lang.AssertionError: User not redirected to listing page or Sort By dropdown not visible expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1590)
+	at org.testng.Assert.assertTrue(Assert.java:57)
+	at com.stepDefinition.searchHome.the_user_should_be_redirected_to_the_property_listing_page(searchHome.java:53)
+	at ✽.the user should be redirected to the property listing page(file:///C:/Users/vijay/eclipse-workspace/magicbricks_website_testing/src/test/resources/Feartures/searchHome.feature:11)
+</pre></div></td>
+<td>9</td>
+<td>com.runner.TestRunnerTestNG@24313fcc</td></tr>
+<tr>
 <td title='com.runner.TestRunnerTestNG.runScenario()'><b>runScenario</b><br>Test class: com.runner.TestRunnerTestNG<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify shortlisting a property from the listing results", "Shortlist property from listing page"</td>
 <td><div><pre>java.lang.AssertionError: Failed to click on the shortlisted property. expected [true] but found [false]
 	at org.testng.Assert.fail(Assert.java:111)
 	at org.testng.Assert.failNotEquals(Assert.java:1590)
 	at org.testng.Assert.assertTrue(Assert.java:57)
 	at com.stepDefinition.shortlistProperty.i_click_on_property(shortlistProperty.java:43)
-	at ✽.I click on property(file:///C:/Users/vijay/eclipse-workspace/magicbricks_website_testing/src/test/resources/Feartures/shortlistProperty.feature:8)
-</pre></div><a href='#' onClick='toggleBox("stack-trace313334570", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace313334570'><pre>java.lang.AssertionError: Failed to click on the shortlisted property. expected [true] but found [false]
+	at ✽.I click on property(file:///C:/Users/vijay/eclipse-workspace/magicbricks_website_testing/src/test/resources/Feartures/shortlistProperty.feature:10)
+</pre></div><a href='#' onClick='toggleBox("stack-trace531576940", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace531576940'><pre>java.lang.AssertionError: Failed to click on the shortlisted property. expected [true] but found [false]
 	at org.testng.Assert.fail(Assert.java:111)
 	at org.testng.Assert.failNotEquals(Assert.java:1590)
 	at org.testng.Assert.assertTrue(Assert.java:57)
 	at com.stepDefinition.shortlistProperty.i_click_on_property(shortlistProperty.java:43)
-	at ✽.I click on property(file:///C:/Users/vijay/eclipse-workspace/magicbricks_website_testing/src/test/resources/Feartures/shortlistProperty.feature:8)
+	at ✽.I click on property(file:///C:/Users/vijay/eclipse-workspace/magicbricks_website_testing/src/test/resources/Feartures/shortlistProperty.feature:10)
 </pre></div></td>
 <td>21</td>
 <td>com.runner.TestRunnerTestNG@24313fcc</td></tr>
@@ -103,19 +139,14 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
+<td title='com.runner.TestRunnerTestNG.runScenario()'><b>runScenario</b><br>Test class: com.runner.TestRunnerTestNG<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Valid user login successfully", "Test Buying a property"</td>
+<td></td>
+<td>81</td>
+<td>com.runner.TestRunnerTestNG@24313fcc</td></tr>
+<tr>
 <td title='com.runner.TestRunnerTestNG.runScenario()'><b>runScenario</b><br>Test class: com.runner.TestRunnerTestNG<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Get the details of the property and owner successfully", "Test Buying a property"</td>
 <td></td>
 <td>0</td>
-<td>com.runner.TestRunnerTestNG@24313fcc</td></tr>
-<tr>
-<td title='com.runner.TestRunnerTestNG.runScenario()'><b>runScenario</b><br>Test class: com.runner.TestRunnerTestNG<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Search and validate property listings by location", "Magicbricks Property Search"</td>
-<td></td>
-<td>6</td>
-<td>com.runner.TestRunnerTestNG@24313fcc</td></tr>
-<tr>
-<td title='com.runner.TestRunnerTestNG.runScenario()'><b>runScenario</b><br>Test class: com.runner.TestRunnerTestNG<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Valid user login successfully", "Test Buying a property"</td>
-<td></td>
-<td>76</td>
 <td>com.runner.TestRunnerTestNG@24313fcc</td></tr>
 </table><p>
 </body>

@@ -87,7 +87,7 @@ public class Hooks extends BaseSteps {
             String timestamp = new SimpleDateFormat("yyyyMMdd_HHmmss").format(new Date());
             String fileName = scenario.getName().replace(" ", "_") 
                               + "step" + timestamp + ".png";
-            String path = "screenshots" + fileName;
+            String path = "reports\\screenshots" + fileName;
 
             File dest = new File(path);
             dest.getParentFile().mkdirs();

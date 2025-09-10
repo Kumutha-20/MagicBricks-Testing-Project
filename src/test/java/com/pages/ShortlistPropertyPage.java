@@ -5,7 +5,6 @@ import java.util.ArrayList;
 import java.util.Set;
 
 import org.openqa.selenium.By;
-import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -14,7 +13,6 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.Status;
 import com.objectrepository.Locators;
-import com.setup.BaseSteps;
 import com.setup.Reporter;
 
 public class ShortlistPropertyPage {
@@ -39,19 +37,25 @@ public class ShortlistPropertyPage {
             WebElement viewShortlistBtn = wait.until(ExpectedConditions.elementToBeClickable(Locators.viewShortlistBtn));
             viewShortlistBtn.click();
             
+            
+          
+            
             // Get all window handles
             Set<String> allWindowHandles = driver.getWindowHandles();
             ArrayList<String> tabs = new ArrayList<>(allWindowHandles);
             
             // Switch to the new tab (assuming it's the second one)
             if (tabs.size() > 1) {
-                driver.switchTo().window(tabs.get(2));
+                driver.switchTo().window(tabs.get(tabs.size()-1));
                 Reporter.generateReport(driver, extTest, Status.PASS, "Shortlisted Property page. Current URL: " + driver.getCurrentUrl());
             } else {
                 Reporter.generateReport(driver, extTest, Status.FAIL, "Failed to switch to a new tab. Only one tab was found.");
                 return false;
             }
 
+         
+            
+            
             // Validate the presence of the new tab's header using the specific locator
             WebElement shortlistedTabHeader = wait.until(ExpectedConditions.visibilityOfElementLocated(Locators.shortlistTabHeader));
             if (shortlistedTabHeader.isDisplayed()) {
@@ -76,6 +80,20 @@ public class ShortlistPropertyPage {
             // Use the more specific locator for the first property
             WebElement firstProperty = wait.until(ExpectedConditions.elementToBeClickable(Locators.shortlistedPropertyCard));
             firstProperty.click();
+            Set<String> allWindowHandles = driver.getWindowHandles();
+            ArrayList<String> tabs = new ArrayList<>(allWindowHandles);
+            
+            if (tabs.size() > 1) {
+                driver.switchTo().window(tabs.get(tabs.size()-1));
+                Reporter.generateReport(driver, extTest, Status.PASS, "Switched to the property details tab.Current URL: " + driver.getCurrentUrl());
+            } else {
+                Reporter.generateReport(driver, extTest, Status.FAIL, "Failed to switch to the property details tab.");
+                return false;
+            }
+
+            
+            
+        
             Reporter.generateReport(driver, extTest, Status.PASS, "Selected first shortlisted property.");
             return true;
         } catch (Exception e) {
@@ -112,15 +130,31 @@ public class ShortlistPropertyPage {
             return false;
         }
     }
-    public boolean viewBrochureIsPresent() {
-        try {
+    
+    public boolean viewcontactAgentIsPresent() {
+       /* try {
             // Wait for the element to be present on the page
-            wait.until(ExpectedConditions.presenceOfElementLocated(Locators.viewbrochure));
-            Reporter.generateReport(driver, extTest, Status.PASS, "View Brochure element is present on the page.");
+            wait.until(ExpectedConditions.visibilityOfElementLocated(Locators.contactagent));
+            Reporter.generateReport(driver, extTest, Status.PASS, "View contact Agent element is present on the page.");
             return true;
         } catch (Exception e) {
-            Reporter.generateReport(driver, extTest, Status.FAIL, "View Brochure element is not present on the page: " + e.getMessage());
+            Reporter.generateReport(driver, extTest, Status.FAIL, "View contact Agent element is not present on the page: " + e.getMessage());
+            return false;
+        }*/
+    	
+    	try {
+       	 WebElement contactagent = wait.until(ExpectedConditions.visibilityOfElementLocated(Locators.contactagent));
+            if (contactagent.isDisplayed()) {
+                Reporter.generateReport(driver, extTest, Status.PASS, "View contact Agent element is present on the page:");
+                return true;
+            } else {
+                Reporter.generateReport(driver, extTest, Status.FAIL, "View contact Agent element is not present on the page:");
+                return false;
+            }
+        } catch (Exception e) {
+            Reporter.generateReport(driver, extTest, Status.FAIL, "Failed to view shortlisted properties: " + e.getMessage());
             return false;
         }
+    	
     }
 }
