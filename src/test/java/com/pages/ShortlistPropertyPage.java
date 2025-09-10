@@ -5,6 +5,7 @@ import java.util.ArrayList;
 import java.util.Set;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -13,6 +14,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.Status;
 import com.objectrepository.Locators;
+import com.setup.BaseSteps;
 import com.setup.Reporter;
 
 public class ShortlistPropertyPage {
@@ -107,6 +109,17 @@ public class ShortlistPropertyPage {
             return true;
         } catch (Exception e) {
             Reporter.generateReport(driver, extTest, Status.FAIL, "Failed to click the main shortlist button: " + e.getMessage());
+            return false;
+        }
+    }
+    public boolean viewBrochureIsPresent() {
+        try {
+            // Wait for the element to be present on the page
+            wait.until(ExpectedConditions.presenceOfElementLocated(Locators.viewbrochure));
+            Reporter.generateReport(driver, extTest, Status.PASS, "View Brochure element is present on the page.");
+            return true;
+        } catch (Exception e) {
+            Reporter.generateReport(driver, extTest, Status.FAIL, "View Brochure element is not present on the page: " + e.getMessage());
             return false;
         }
     }

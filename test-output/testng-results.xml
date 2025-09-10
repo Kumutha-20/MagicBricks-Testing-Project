@@ -1,27 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="5" passed="1" failed="4" skipped="0">
+<testng-results ignored="0" total="4" passed="3" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-09-10T10:54:28 IST" name="Default suite" finished-at="2025-09-10T10:55:52 IST" duration-ms="84631">
+  <suite started-at="2025-09-10T14:29:51 IST" name="Default suite" finished-at="2025-09-10T14:31:42 IST" duration-ms="111237">
     <groups>
       <group name="cucumber">
         <method signature="AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.runner.TestRunnerTestNG@24313fcc]" name="runScenario" class="io.cucumber.testng.AbstractTestNGCucumberTests"/>
       </group> <!-- cucumber -->
     </groups>
-    <test started-at="2025-09-10T10:54:28 IST" name="Default test" finished-at="2025-09-10T10:55:52 IST" duration-ms="84631">
+    <test started-at="2025-09-10T14:29:51 IST" name="Default test" finished-at="2025-09-10T14:31:42 IST" duration-ms="111237">
       <class name="com.runner.TestRunnerTestNG">
-        <test-method is-config="true" signature="setUpClass(org.testng.ITestContext)[pri:0, instance:com.runner.TestRunnerTestNG@24313fcc]" started-at="2025-09-10T10:54:28 IST" name="setUpClass" finished-at="2025-09-10T10:54:33 IST" duration-ms="5409" status="PASS">
+        <test-method is-config="true" signature="setUpClass(org.testng.ITestContext)[pri:0, instance:com.runner.TestRunnerTestNG@24313fcc]" started-at="2025-09-10T14:29:51 IST" name="setUpClass" finished-at="2025-09-10T14:29:57 IST" duration-ms="6159" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[org.testng.TestRunner@8fd91d1]]>
+                <![CDATA[org.testng.TestRunner@186d8a71]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpClass -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.runner.TestRunnerTestNG@24313fcc]" started-at="2025-09-10T10:54:33 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-09-10T10:54:33 IST" duration-ms="206" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.runner.TestRunnerTestNG@24313fcc]" started-at="2025-09-10T14:29:57 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-09-10T14:29:58 IST" duration-ms="303" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -37,7 +37,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.runner.TestRunnerTestNG@24313fcc]" started-at="2025-09-10T10:54:33 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-09-10T10:55:20 IST" duration-ms="46495" status="FAIL">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.runner.TestRunnerTestNG@24313fcc]" started-at="2025-09-10T14:29:58 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-09-10T14:31:14 IST" duration-ms="76198" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -50,24 +50,10 @@
               </value>
             </param>
           </params>
-          <exception class="java.lang.AssertionError">
-            <message>
-              <![CDATA[Failed at login -> enterOtp() expected [true] but found [false]]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: Failed at login -> enterOtp() expected [true] but found [false]
-at org.testng.Assert.fail(Assert.java:111)
-at org.testng.Assert.failNotEquals(Assert.java:1590)
-at org.testng.Assert.assertTrue(Assert.java:57)
-at com.stepDefinition.Profile.i_enter_the_otp(Profile.java:49)
-at ✽.I enter the otp(file:///C:/Users/vijay/eclipse-workspace/magicbricks_website_testing/src/test/resources/Feartures/Profile.feature:8)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.runner.TestRunnerTestNG@24313fcc]" started-at="2025-09-10T10:55:20 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-09-10T10:55:36 IST" duration-ms="15628" status="FAIL">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.runner.TestRunnerTestNG@24313fcc]" started-at="2025-09-10T14:31:14 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-09-10T14:31:21 IST" duration-ms="6977" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -80,24 +66,10 @@ at ✽.I enter the otp(file:///C:/Users/vijay/eclipse-workspace/magicbricks_webs
               </value>
             </param>
           </params>
-          <exception class="java.lang.AssertionError">
-            <message>
-              <![CDATA[Failed to enter location: Chennai expected [true] but found [false]]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: Failed to enter location: Chennai expected [true] but found [false]
-at org.testng.Assert.fail(Assert.java:111)
-at org.testng.Assert.failNotEquals(Assert.java:1590)
-at org.testng.Assert.assertTrue(Assert.java:57)
-at com.stepDefinition.searchHome.the_user_enters_in_the_search_bar(searchHome.java:29)
-at ✽.the user enters "Chennai" in the Search bar(file:///C:/Users/vijay/eclipse-workspace/magicbricks_website_testing/src/test/resources/Feartures/searchHome.feature:5)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.runner.TestRunnerTestNG@24313fcc]" started-at="2025-09-10T10:55:36 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-09-10T10:55:51 IST" duration-ms="15659" status="FAIL">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.runner.TestRunnerTestNG@24313fcc]" started-at="2025-09-10T14:31:21 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-09-10T14:31:42 IST" duration-ms="21074" status="FAIL">
           <params>
             <param index="0">
               <value>
@@ -112,52 +84,22 @@ at ✽.the user enters "Chennai" in the Search bar(file:///C:/Users/vijay/eclips
           </params>
           <exception class="java.lang.AssertionError">
             <message>
-              <![CDATA[Failed to select sortby mostrecent filter. expected [true] but found [false]]]>
+              <![CDATA[Failed to click on the shortlisted property. expected [true] but found [false]]]>
             </message>
             <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: Failed to select sortby mostrecent filter. expected [true] but found [false]
+              <![CDATA[java.lang.AssertionError: Failed to click on the shortlisted property. expected [true] but found [false]
 at org.testng.Assert.fail(Assert.java:111)
 at org.testng.Assert.failNotEquals(Assert.java:1590)
 at org.testng.Assert.assertTrue(Assert.java:57)
-at com.stepDefinition.shortlistProperty.clicks_on_sortby_and_selects_most_recent_filter(shortlistProperty.java:24)
-at ✽.clicks on sortby and selects most recent filter(file:///C:/Users/vijay/eclipse-workspace/magicbricks_website_testing/src/test/resources/Feartures/shortlistProperty.feature:5)
+at com.stepDefinition.shortlistProperty.i_click_on_property(shortlistProperty.java:43)
+at ✽.I click on property(file:///C:/Users/vijay/eclipse-workspace/magicbricks_website_testing/src/test/resources/Feartures/shortlistProperty.feature:8)
 ]]>
             </full-stacktrace>
           </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.runner.TestRunnerTestNG@24313fcc]" started-at="2025-09-10T10:55:51 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-09-10T10:55:52 IST" duration-ms="489" status="FAIL">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA["Get the details of the property and owner successfully"]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA["View property details and contact the owner"]]>
-              </value>
-            </param>
-          </params>
-          <exception class="java.lang.AssertionError">
-            <message>
-              <![CDATA[Failed to navigate to the property details page. expected [true] but found [false]]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: Failed to navigate to the property details page. expected [true] but found [false]
-at org.testng.Assert.fail(Assert.java:111)
-at org.testng.Assert.failNotEquals(Assert.java:1590)
-at org.testng.Assert.assertTrue(Assert.java:57)
-at com.stepDefinition.viewpropertyDetails.i_validate_that_the_property_details_page_is_open(viewpropertyDetails.java:24)
-at ✽.I validate that the property details page is open(file:///C:/Users/vijay/eclipse-workspace/magicbricks_website_testing/src/test/resources/Feartures/viewpropertyDetails.feature:5)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.AssertionError -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- runScenario -->
-        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:com.runner.TestRunnerTestNG@24313fcc]" started-at="2025-09-10T10:55:52 IST" name="tearDownClass" finished-at="2025-09-10T10:55:52 IST" duration-ms="679" status="PASS">
+        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:com.runner.TestRunnerTestNG@24313fcc]" started-at="2025-09-10T14:31:42 IST" name="tearDownClass" finished-at="2025-09-10T14:31:42 IST" duration-ms="440" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDownClass -->
