@@ -9,68 +9,38 @@
 <table>
 <tr><th>Test</th><th># Passed</th><th># Skipped</th><th># Retried</th><th># Failed</th><th>Time (ms)</th><th>Included Groups</th><th>Excluded Groups</th></tr>
 <tr><th colspan="8">Default suite</th></tr>
-<tr><td><a href="#t0">Default test</a></td><td class="num">3</td><td class="num">0</td><td class="num">0</td><td class="num attn">1</td><td class="num">107,211</td><td></td><td></td></tr>
+<tr><td><a href="#t0">Default test</a></td><td class="num">1</td><td class="num">0</td><td class="num">0</td><td class="num attn">4</td><td class="num">84,631</td><td></td><td></td></tr>
 </table>
-<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Default suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Default test &#8212; failed (configuration methods)</th></tr><tr class="failedeven"><td rowspan="1">com.runner.TestRunnerTestNG</td><td><a href="#m0">tearDownClass</a></td><td rowspan="1">1757432538655</td><td rowspan="1">646</td></tr><tr><th colspan="4">Default test &#8212; failed</th></tr><tr class="failedeven"><td rowspan="1">com.runner.TestRunnerTestNG</td><td><a href="#m1">runScenario</a></td><td rowspan="1">1757432536414</td><td rowspan="1">2233</td></tr><tr><th colspan="4">Default test &#8212; passed</th></tr><tr class="passedeven"><td rowspan="3">com.runner.TestRunnerTestNG</td><td><a href="#m2">runScenario</a></td><td rowspan="3">1757432509738</td><td rowspan="3">26671</td></tr><tr class="passedeven"><td><a href="#m3">runScenario</a></td></tr><tr class="passedeven"><td><a href="#m4">runScenario</a></td></tr></tbody>
+<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Default suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Default test &#8212; failed</th></tr><tr class="failedeven"><td rowspan="4">com.runner.TestRunnerTestNG</td><td><a href="#m0">runScenario</a></td><td rowspan="4">1757481936070</td><td rowspan="4">15659</td></tr><tr class="failedeven"><td><a href="#m1">runScenario</a></td></tr><tr class="failedeven"><td><a href="#m2">runScenario</a></td></tr><tr class="failedeven"><td><a href="#m3">runScenario</a></td></tr><tr><th colspan="4">Default test &#8212; passed</th></tr><tr class="passedeven"><td rowspan="1">com.runner.TestRunnerTestNG</td><td><a href="#m4">runScenario</a></td><td rowspan="1">1757481873733</td><td rowspan="1">206</td></tr></tbody>
 </table>
-<h2>Default test</h2><h3 id="m0">com.runner.TestRunnerTestNG#tearDownClass</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.IllegalStateException: java.io.IOException: There is not enough space on the disk
-	at io.cucumber.core.plugin.HtmlFormatter.write(HtmlFormatter.java:29)
-	at io.cucumber.core.eventbus.AbstractEventPublisher.send(AbstractEventPublisher.java:51)
-	at io.cucumber.core.eventbus.AbstractEventBus.send(AbstractEventBus.java:12)
-	at io.cucumber.core.runtime.SynchronizedEventBus.send(SynchronizedEventBus.java:47)
-	at io.cucumber.core.runtime.CucumberExecutionContext.emitTestRunFinished(CucumberExecutionContext.java:124)
-	at io.cucumber.core.runtime.CucumberExecutionContext.finishTestRun(CucumberExecutionContext.java:104)
-	at io.cucumber.testng.TestNGCucumberRunner.finish(TestNGCucumberRunner.java:148)
-	at io.cucumber.testng.AbstractTestNGCucumberTests.tearDownClass(AbstractTestNGCucumberTests.java:57)
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
-	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:71)
-	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:400)
-	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:333)
-	at org.testng.internal.invokers.TestMethodWorker.invokeAfterClassConfigurations(TestMethodWorker.java:238)
-	at org.testng.internal.invokers.TestMethodWorker.invokeAfterClassMethods(TestMethodWorker.java:223)
-	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:137)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-	at org.testng.TestRunner.privateRun(TestRunner.java:741)
-	at org.testng.TestRunner.run(TestRunner.java:616)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
-	at org.testng.TestNG.runSuites(TestNG.java:1112)
-	at org.testng.TestNG.run(TestNG.java:1079)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
-Caused by: java.io.IOException: There is not enough space on the disk
-	at java.base/java.io.FileOutputStream.writeBytes(Native Method)
-	at java.base/java.io.FileOutputStream.write(FileOutputStream.java:367)
-	at java.base/sun.nio.cs.StreamEncoder.writeBytes(StreamEncoder.java:309)
-	at java.base/sun.nio.cs.StreamEncoder.implWrite(StreamEncoder.java:381)
-	at java.base/sun.nio.cs.StreamEncoder.implWrite(StreamEncoder.java:357)
-	at java.base/sun.nio.cs.StreamEncoder.lockedWrite(StreamEncoder.java:158)
-	at java.base/sun.nio.cs.StreamEncoder.write(StreamEncoder.java:139)
-	at java.base/java.io.OutputStreamWriter.write(OutputStreamWriter.java:219)
-	at io.cucumber.htmlformatter.JsonInHtmlWriter.write(JsonInHtmlWriter.java:41)
-	at io.cucumber.core.internal.com.fasterxml.jackson.core.json.WriterBasedJsonGenerator._flushBuffer(WriterBasedJsonGenerator.java:2065)
-	at io.cucumber.core.internal.com.fasterxml.jackson.core.json.WriterBasedJsonGenerator._writeLongString(WriterBasedJsonGenerator.java:1147)
-	at io.cucumber.core.internal.com.fasterxml.jackson.core.json.WriterBasedJsonGenerator._writeString(WriterBasedJsonGenerator.java:1083)
-	at io.cucumber.core.internal.com.fasterxml.jackson.core.json.WriterBasedJsonGenerator.writeString(WriterBasedJsonGenerator.java:435)
-	at io.cucumber.core.internal.com.fasterxml.jackson.databind.ser.std.StringSerializer.serialize(StringSerializer.java:40)
-	at io.cucumber.core.internal.com.fasterxml.jackson.databind.ser.std.ReferenceTypeSerializer.serialize(ReferenceTypeSerializer.java:390)
-	at io.cucumber.core.internal.com.fasterxml.jackson.databind.ser.BeanPropertyWriter.serializeAsField(BeanPropertyWriter.java:732)
-	at io.cucumber.core.internal.com.fasterxml.jackson.databind.ser.std.BeanSerializerBase.serializeFields(BeanSerializerBase.java:760)
-	at io.cucumber.core.internal.com.fasterxml.jackson.databind.ser.BeanSerializer.serialize(BeanSerializer.java:183)
-	at io.cucumber.core.internal.com.fasterxml.jackson.databind.ser.std.ReferenceTypeSerializer.serialize(ReferenceTypeSerializer.java:390)
-	at io.cucumber.core.internal.com.fasterxml.jackson.databind.ser.BeanPropertyWriter.serializeAsField(BeanPropertyWriter.java:732)
-	at io.cucumber.core.internal.com.fasterxml.jackson.databind.ser.std.BeanSerializerBase.serializeFields(BeanSerializerBase.java:760)
-	at io.cucumber.core.internal.com.fasterxml.jackson.databind.ser.BeanSerializer.serialize(BeanSerializer.java:183)
-	at io.cucumber.core.internal.com.fasterxml.jackson.databind.ser.std.ReferenceTypeSerializer.serialize(ReferenceTypeSerializer.java:390)
-	at io.cucumber.core.internal.com.fasterxml.jackson.databind.ser.BeanPropertyWriter.serializeAsField(BeanPropertyWriter.java:732)
-	at io.cucumber.core.internal.com.fasterxml.jackson.databind.ser.std.BeanSerializerBase.serializeFields(BeanSerializerBase.java:760)
-	at io.cucumber.core.internal.com.fasterxml.jackson.databind.ser.BeanSerializer.serialize(Be
+<h2>Default test</h2><h3 id="m0">com.runner.TestRunnerTestNG#runScenario</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr><tr class="param stripe"><td>&quot;Verify shortlisting a property from the listing results&quot;</td><td>&quot;Shortlist property from listing page&quot;</td></tr><tr><th colspan="2">Exception</th></tr><tr><td colspan="2"><div class="stacktrace">java.lang.AssertionError: Failed to select sortby mostrecent filter. expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1590)
+	at org.testng.Assert.assertTrue(Assert.java:57)
+	at com.stepDefinition.shortlistProperty.clicks_on_sortby_and_selects_most_recent_filter(shortlistProperty.java:24)
+	at ✽.clicks on sortby and selects most recent filter(file:///C:/Users/vijay/eclipse-workspace/magicbricks_website_testing/src/test/resources/Feartures/shortlistProperty.feature:5)
+</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m1">com.runner.TestRunnerTestNG#runScenario</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr><tr class="param stripe"><td>&quot;Valid user login successfully&quot;</td><td>&quot;Test Buying a property&quot;</td></tr><tr><th colspan="2">Exception</th></tr><tr><td colspan="2"><div class="stacktrace">java.lang.AssertionError: Failed at login -&gt; enterOtp() expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1590)
+	at org.testng.Assert.assertTrue(Assert.java:57)
+	at com.stepDefinition.Profile.i_enter_the_otp(Profile.java:49)
+	at ✽.I enter the otp(file:///C:/Users/vijay/eclipse-workspace/magicbricks_website_testing/src/test/resources/Feartures/Profile.feature:8)
+</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m2">com.runner.TestRunnerTestNG#runScenario</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr><tr class="param stripe"><td>&quot;Search and validate property listings by location&quot;</td><td>&quot;Magicbricks Property Search&quot;</td></tr><tr><th colspan="2">Exception</th></tr><tr><td colspan="2"><div class="stacktrace">java.lang.AssertionError: Failed to enter location: Chennai expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1590)
+	at org.testng.Assert.assertTrue(Assert.java:57)
+	at com.stepDefinition.searchHome.the_user_enters_in_the_search_bar(searchHome.java:29)
+	at ✽.the user enters &quot;Chennai&quot; in the Search bar(file:///C:/Users/vijay/eclipse-workspace/magicbricks_website_testing/src/test/resources/Feartures/searchHome.feature:5)
+</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m3">com.runner.TestRunnerTestNG#runScenario</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr><tr class="param stripe"><td>&quot;Get the details of the property and owner successfully&quot;</td><td>&quot;View property details and contact the owner&quot;</td></tr><tr><th colspan="2">Exception</th></tr><tr><td colspan="2"><div class="stacktrace">java.lang.AssertionError: Failed to navigate to the property details page. expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1590)
+	at org.testng.Assert.assertTrue(Assert.java:57)
+	at com.stepDefinition.viewpropertyDetails.i_validate_that_the_property_details_page_is_open(viewpropertyDetails.java:24)
+	at ✽.I validate that the property details page is open(file:///C:/Users/vijay/eclipse-workspace/magicbricks_website_testing/src/test/resources/Feartures/viewpropertyDetails.feature:5)
+</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m4">com.runner.TestRunnerTestNG#runScenario</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr><tr class="param stripe"><td>&quot;Get the details of the property and owner successfully&quot;</td><td>&quot;Test Buying a property&quot;</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+</body>
+</html>

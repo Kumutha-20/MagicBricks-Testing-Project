@@ -18,8 +18,8 @@ public class Locators {
      
      // for enter the location
    
-     public static By defaultLocation = By.xpath("//*[@id=\"commercialIndex\"]/header/section[1]/div/div[1]/div[2]/a");
-     public static By closedefault = By.xpath("//*[@id=\"commercialIndex\"]/header/section[1]/div/div[1]/div[2]/div/div[1]/div[3]/ul/li[4]/a");
+     //public static By defaultLocation = By.xpath("//*[@id=\"commercialIndex\"]/header/section[1]/div/div[1]/div[2]/a");
+     //public static By closedefault = By.xpath("//*[@id=\"commercialIndex\"]/header/section[1]/div/div[1]/div[2]/div/div[1]/div[3]/ul/li[4]/a");
      public static By enterlocation = By.id("keyword");
      
      // selecting propertytype
@@ -36,13 +36,16 @@ public class Locators {
      public static By closeBudget = By.xpath("//*[@id=\"rent_budget_lbl\"]");
      public static By searchButton = By.xpath("//*[@id=\"searchFormHolderSection\"]/section/div/div[1]/div[3]/div[4]");
      
-     //shortlist property
+     //sort property
      public static By sortBy = By.xpath("//*[@id=\"body\"]/div[5]/div/div/div[1]/div[1]/div[1]");
      public static By mostrecent = By.xpath("//*[@id=\"body\"]/div[5]/div/div/div[1]/div[1]/div/div[2]/ul/li[4]");
-     public static By shortlistButton = By.xpath("//*[@id=\"cardid81061849\"]/div/div[1]/div[2]/span[2]");
+     
+     //shortlist property
+     public static By shortlistButton = By.xpath("//*[@id=\"cardid80170161\"]/div/div[1]/div[2]/span[2]");
      public static By mainshortlistbtn = By.xpath("//*[@id=\"propertysrp\"]/div[1]/div/div/div[2]/div[5]/span");
      public static By viewShortlistBtn = By.xpath("//*[@id=\"propertysrp\"]/div[1]/div/div/div[2]/div[5]/div/div/a");
-     public static By shortlistedPropertyTitle = By.xpath("//*[@id=\"cardid81061849\"]/div/div[1]/div[2]/h2");
-     public static By shortlistedPropertyCard = By.xpath("//*[@id=\"cardid81061849\"]/div[2]/div[1]/div[2]");
+     public static By shortlistedPropertyCard = By.xpath("//*[@id=\"cardid80170161\"]/div[2]");
      public static By shortlistTabHeader = By.xpath("//*[@id=\"m-tab-Shortlisted\"]");
+     
+     public static By viewDetailsButton = By.xpath("//*[@id=\"more-details\"]/div[2]/div[1]/a");
 }

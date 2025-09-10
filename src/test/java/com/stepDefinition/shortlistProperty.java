@@ -29,7 +29,7 @@ public class shortlistProperty extends BaseSteps {
         boolean actResult = shortlistPage.shortlistPropertyFromList();
         Assert.assertTrue(actResult, "Failed to shortlist the first property from the listing.");
 	   
-	}
+	} 
 	@When("I view the shortlisted properties")
 	public void i_view_the_shortlisted_properties() {
 		shortlistPage = new ShortlistPropertyPage(driver, Hooks.extTest);
