@@ -20,10 +20,15 @@ import io.cucumber.java.BeforeAll;
 import io.cucumber.java.Scenario;
 
 public class Hooks extends BaseSteps {
-
+    
+	public static String[][] excelData; 
     static ExtentSparkReporter spark;
     static ExtentReports extReports;
     public static ExtentTest extTest;
+    
+    public static int currentrow = 0;
+
+   	public static int firstrow;
 
     @BeforeAll
     public static void setUpReportsAndBrowser() {

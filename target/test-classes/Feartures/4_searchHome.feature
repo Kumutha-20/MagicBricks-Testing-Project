@@ -1,4 +1,4 @@
-@order2
+
 
 Feature: Magicbricks Property Search
 
@@ -11,7 +11,5 @@ Feature: Magicbricks Property Search
     Then the user should be redirected to the property listing page
     
 
-  Examples:
-    | location   |  
-    | Mumbai  | 
+  
     

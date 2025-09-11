@@ -47,5 +47,21 @@ public class Locators {
      public static By shortlistedPropertyCard = By.xpath("//*[@id=\"cardid80311141\"]/div[2]");
      public static By shortlistTabHeader = By.xpath("//*[@id=\"m-tab-Shortlisted\"]");
      
-     public static By contactagent = By.xpath("//*[@id=\"contactRightInfo\"]/div[1]");
+     public static By contactagent = By.xpath("//*[@id=\"contactRightInfo\"]");
+     
+     public static By clickEmi = By.xpath("//*[@id=\"details\"]/div/div[1]/a[1]");
+     public static By magicLoans = By.xpath("/html/body/div/div[4]/div[1]/div/div/div[1]/div");
+     public static By clearAmount = By.xpath("//*[@id=\"amountRequiredEmiCal\"]");
+     public static By loanAmount = By.xpath("//*[@id=\"amountRequiredEmiCal\"]");
+     public static By loanTenure = By.xpath("/html/body/div/div[4]/div[1]/div/div/div[1]/form/div[2]/div[1]/div");
+     public static By dropdownloanTenure = By.xpath("//*[@id=\"loan-tenure_Emi\"]/li[6]");
+     public static By clearinterestRate = By.xpath("//*[@id=\"interestRateEmiCal\"]");
+     public static By interestRate = By.xpath("//*[@id=\"interestRateEmiCal\"]");
+     //public static By clickNo = By.xpath("/html/body/div/div[4]/div[1]/div/div/div[1]/form/div[3]/div[2]/div[2]/label");
+     //public static By dropdownCity = By.xpath("/html/body/div/div[4]/div[1]/div/div/div[1]/form/div[4]/div[1]/label");
+     //public static By selectCity = By.xpath("//*[@id=\"4320\"]");
+     public static By recalculateEmi = By.xpath("//*[@id=\"submitbuttonEmiCalid\"]");
+     public static By eligibleEmiAmount = By.xpath("//*[@id=\"emiResultSection\"]/div/div[1]/div[1]");
+     
+     public static By crossloc =By.xpath("//*[@id=\"keyword_autoSuggestSelectedDiv\"]/div/div[2]");
 }

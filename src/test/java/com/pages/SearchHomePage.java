@@ -36,7 +36,7 @@ public class SearchHomePage {
 		  WebElement locationBox =
 		  wait.until(ExpectedConditions.elementToBeClickable(Locators.clickLocation));
 		  ((JavascriptExecutor) driver).executeScript("arguments[0].click();", locationBox); 
-		  WebElement locationBox1 =wait.until(ExpectedConditions.elementToBeClickable(Locators.closedefault));
+		  WebElement locationBox1 =wait.until(ExpectedConditions.elementToBeClickable(Locators.crossloc));
 		  ((JavascriptExecutor) driver).executeScript("arguments[0].click();",locationBox1); 
 		  locationBox.clear(); 
 		  locationBox.sendKeys(location);
@@ -130,6 +130,22 @@ public class SearchHomePage {
             }
         } catch (Exception e) {
             Reporter.generateReport(driver, extTest, Status.FAIL, "Failed to validate listing page: " + e.getMessage());
+            return false;
+        }
+    }
+    
+    public boolean validateStayOnHome() {
+        try {
+            WebElement buyHeading = wait.until(
+                ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id='buyheading']"))
+            );
+            if (buyHeading.isDisplayed()) {
+                Reporter.generateReport(driver, extTest, Status.PASS, "User remained on home page.");
+                return true;
+            }
+            return false;
+        } catch (Exception e) {
+            Reporter.generateReport(driver, extTest, Status.FAIL, "User did not remain on home page: " + e.getMessage());
             return false;
         }
     }
