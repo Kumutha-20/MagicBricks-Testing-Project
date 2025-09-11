@@ -31,22 +31,28 @@ public class SearchHomePage {
 
     // Enter location
     public boolean enterLocation(String location) {
-        try {
-          	WebElement defaultlocation = wait.until(ExpectedConditions.elementToBeClickable(Locators.defaultLocation));
-            defaultlocation.click();
-            WebElement closedefault = wait.until(ExpectedConditions.elementToBeClickable(Locators.closedefault));
-            closedefault.click();
-            WebElement locationBox = wait.until(ExpectedConditions.elementToBeClickable(Locators.enterlocation));
-            locationBox.clear();
-            locationBox.sendKeys(location);
-            Reporter.generateReport(driver, extTest, Status.PASS, "Entered location: " + location);
-            return true;
-        } catch (Exception e) {
-            Reporter.generateReport(driver, extTest, Status.FAIL, "Failed to enter location: " + e.getMessage());
-            return false;
-        }
-    }
+    try {
+		  
+		  WebElement locationBox =
+		  wait.until(ExpectedConditions.elementToBeClickable(Locators.clickLocation));
+		  ((JavascriptExecutor) driver).executeScript("arguments[0].click();", locationBox); 
+		  WebElement locationBox1 =wait.until(ExpectedConditions.elementToBeClickable(Locators.closedefault));
+		  ((JavascriptExecutor) driver).executeScript("arguments[0].click();",locationBox1); 
+		  locationBox.clear(); 
+		  locationBox.sendKeys(location);
+		  WebElement locationBox2 =wait.until(ExpectedConditions.elementToBeClickable(Locators.selectdropdownLocation));
+		  ((JavascriptExecutor) driver).executeScript("arguments[0].click();",locationBox2); 
 
+
+		  
+		  Reporter.generateReport(driver, extTest, Status.PASS, "Entered location: " +
+		  location); return true; } catch (Exception e) {
+		  Reporter.generateReport(driver, extTest, Status.FAIL,
+		  "Failed to enter location: " + e.getMessage()); return false;
+		  
+	
+}
+}
     public boolean selectPropertyType() {
 		try {
 			WebElement dropdown = wait.until(ExpectedConditions.elementToBeClickable(Locators.clickPropertType));
@@ -78,13 +84,13 @@ public class SearchHomePage {
             //Min dropdown
             WebElement minOption = wait.until(ExpectedConditions.elementToBeClickable(Locators.mindropdown));
             //minOption.clear();              
-            minOption.sendKeys("500000");
+            minOption.sendKeys("20000000");
             minOption.click();
 
             //Min dropdown
             WebElement maxOption = wait.until(ExpectedConditions.elementToBeClickable(Locators.maxdropdown));
             //maxOption.clear();              
-            maxOption.sendKeys("15000000");
+            maxOption.sendKeys("40000000");
             maxOption.click();
             WebElement closeOption = wait.until(ExpectedConditions.elementToBeClickable(Locators.closeBudget));
             closeOption.click();

@@ -102,6 +102,7 @@ public class ShortlistPropertyPage {
         }
     }
     public boolean sortByFilter() {
+    	WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(20));
     	try {
     		WebElement shortlistBtn1 = wait.until(ExpectedConditions.elementToBeClickable(Locators.sortBy));
     	    shortlistBtn1.click();
@@ -116,6 +117,7 @@ public class ShortlistPropertyPage {
     	 }
     }
     public boolean shortlistPropertyFromList() {
+    	WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(20));
         try {
         	   
           	WebElement shortlistBtn3=wait.until(ExpectedConditions.elementToBeClickable(Locators.shortlistButton));

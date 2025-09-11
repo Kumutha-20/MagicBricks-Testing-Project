@@ -1,27 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="5" passed="2" failed="3" skipped="0">
+<testng-results ignored="0" total="4" passed="2" failed="2" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-09-10T23:18:11 IST" name="Default suite" finished-at="2025-09-10T23:20:27 IST" duration-ms="136127">
+  <suite started-at="2025-09-11T11:25:49 IST" name="Default suite" finished-at="2025-09-11T11:27:13 IST" duration-ms="84970">
     <groups>
       <group name="cucumber">
         <method signature="AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.runner.TestRunnerTestNG@24313fcc]" name="runScenario" class="io.cucumber.testng.AbstractTestNGCucumberTests"/>
       </group> <!-- cucumber -->
     </groups>
-    <test started-at="2025-09-10T23:18:11 IST" name="Default test" finished-at="2025-09-10T23:20:27 IST" duration-ms="136127">
+    <test started-at="2025-09-11T11:25:49 IST" name="Default test" finished-at="2025-09-11T11:27:13 IST" duration-ms="84970">
       <class name="com.runner.TestRunnerTestNG">
-        <test-method is-config="true" signature="setUpClass(org.testng.ITestContext)[pri:0, instance:com.runner.TestRunnerTestNG@24313fcc]" started-at="2025-09-10T23:18:11 IST" name="setUpClass" finished-at="2025-09-10T23:18:17 IST" duration-ms="6172" status="PASS">
+        <test-method is-config="true" signature="setUpClass(org.testng.ITestContext)[pri:0, instance:com.runner.TestRunnerTestNG@24313fcc]" started-at="2025-09-11T11:25:49 IST" name="setUpClass" finished-at="2025-09-11T11:25:58 IST" duration-ms="9262" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[org.testng.TestRunner@25953be6]]>
+                <![CDATA[org.testng.TestRunner@2349f14d]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpClass -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.runner.TestRunnerTestNG@24313fcc]" started-at="2025-09-10T23:18:17 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-09-10T23:18:17 IST" duration-ms="170" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.runner.TestRunnerTestNG@24313fcc]" started-at="2025-09-11T11:25:58 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-09-11T11:25:58 IST" duration-ms="182" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -37,7 +37,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.runner.TestRunnerTestNG@24313fcc]" started-at="2025-09-10T23:18:17 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-09-10T23:19:39 IST" duration-ms="81845" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.runner.TestRunnerTestNG@24313fcc]" started-at="2025-09-11T11:25:58 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-09-11T11:27:03 IST" duration-ms="65002" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -53,7 +53,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.runner.TestRunnerTestNG@24313fcc]" started-at="2025-09-10T23:19:39 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-09-10T23:19:49 IST" duration-ms="9854" status="FAIL">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.runner.TestRunnerTestNG@24313fcc]" started-at="2025-09-11T11:27:03 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-09-11T11:27:11 IST" duration-ms="7618" status="FAIL">
           <params>
             <param index="0">
               <value>
@@ -83,37 +83,7 @@ at ✽.the user should be redirected to the property listing page(file:///C:/Use
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.runner.TestRunnerTestNG@24313fcc]" started-at="2025-09-10T23:19:49 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-09-10T23:20:05 IST" duration-ms="16152" status="FAIL">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA["Go back to home page and search Premium Homes"]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA["Magicbricks Premium Homes Search"]]>
-              </value>
-            </param>
-          </params>
-          <exception class="java.lang.AssertionError">
-            <message>
-              <![CDATA[Failed to navigate back to home page. expected [true] but found [false]]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: Failed to navigate back to home page. expected [true] but found [false]
-at org.testng.Assert.fail(Assert.java:111)
-at org.testng.Assert.failNotEquals(Assert.java:1590)
-at org.testng.Assert.assertTrue(Assert.java:57)
-at com.stepDefinition.searchPremiumHome.the_user_navigates_back_to_the_home_page(searchPremiumHome.java:29)
-at ✽.the user navigates back to the home page(file:///C:/Users/vijay/eclipse-workspace/magicbricks_website_testing/src/test/resources/Feartures/searchPremiumHome.feature:7)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.AssertionError -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.runner.TestRunnerTestNG@24313fcc]" started-at="2025-09-10T23:20:05 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-09-10T23:20:26 IST" duration-ms="21435" status="FAIL">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.runner.TestRunnerTestNG@24313fcc]" started-at="2025-09-11T11:27:11 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-09-11T11:27:13 IST" duration-ms="2476" status="FAIL">
           <params>
             <param index="0">
               <value>
@@ -128,22 +98,22 @@ at ✽.the user navigates back to the home page(file:///C:/Users/vijay/eclipse-w
           </params>
           <exception class="java.lang.AssertionError">
             <message>
-              <![CDATA[Failed to click on the shortlisted property. expected [true] but found [false]]]>
+              <![CDATA[Failed to shortlist the first property from the listing. expected [true] but found [false]]]>
             </message>
             <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: Failed to click on the shortlisted property. expected [true] but found [false]
+              <![CDATA[java.lang.AssertionError: Failed to shortlist the first property from the listing. expected [true] but found [false]
 at org.testng.Assert.fail(Assert.java:111)
 at org.testng.Assert.failNotEquals(Assert.java:1590)
 at org.testng.Assert.assertTrue(Assert.java:57)
-at com.stepDefinition.shortlistProperty.i_click_on_property(shortlistProperty.java:43)
-at ✽.I click on property(file:///C:/Users/vijay/eclipse-workspace/magicbricks_website_testing/src/test/resources/Feartures/shortlistProperty.feature:10)
+at com.stepDefinition.shortlistProperty.i_shortlist_the_first_property_from_the_listing(shortlistProperty.java:30)
+at ✽.I shortlist the first property from the listing(file:///C:/Users/vijay/eclipse-workspace/magicbricks_website_testing/src/test/resources/Feartures/shortlistProperty.feature:8)
 ]]>
             </full-stacktrace>
           </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:com.runner.TestRunnerTestNG@24313fcc]" started-at="2025-09-10T23:20:26 IST" name="tearDownClass" finished-at="2025-09-10T23:20:27 IST" duration-ms="426" status="PASS">
+        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:com.runner.TestRunnerTestNG@24313fcc]" started-at="2025-09-11T11:27:13 IST" name="tearDownClass" finished-at="2025-09-11T11:27:13 IST" duration-ms="373" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDownClass -->
