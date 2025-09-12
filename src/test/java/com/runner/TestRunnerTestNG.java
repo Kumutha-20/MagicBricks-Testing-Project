@@ -4,10 +4,9 @@ import io.cucumber.testng.AbstractTestNGCucumberTests;
 import io.cucumber.testng.CucumberOptions;
 
 @CucumberOptions(
-	    features = {"src/test/resources/Feartures/2_Profile.feature", 
-	    		"src/test/resources/Feartures/4_searchHome.feature", 
-	    		"src/test/resources/Feartures/5_shortlistProperty.feature", 
-	    		"src/test/resources/Feartures/6_emiCalculator.feature"},
+	    features = {"src/test/resources/Feartures/3_invalidsearchlocation.feature",
+	    		"src/test/resources/Feartures/1_invalidlogin.feature",
+	    		"src/test/resources/Feartures/7_invalidemicalculator.feature"},
 	    glue = {"com.stepDefinition"},
 	    plugin = {"pretty","html:reports/cucumber-html-report.html"}
 	)

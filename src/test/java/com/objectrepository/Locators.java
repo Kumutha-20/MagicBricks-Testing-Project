@@ -64,4 +64,15 @@ public class Locators {
      public static By eligibleEmiAmount = By.xpath("//*[@id=\"emiResultSection\"]/div/div[1]/div[1]");
      
      public static By crossloc =By.xpath("//*[@id=\"keyword_autoSuggestSelectedDiv\"]/div/div[2]");
+     
+     //invalid emi calculator
+     public static By clickHomenloan = By.xpath("//*[@id=\"commercialIndex\"]/header/section[2]/div/ul/li[4]/a");
+     public static By clickEmicalculator = By.xpath("//*[@id=\"homeloanDrop\"]/div/div[3]/ul/li[1]/a");
+     public static By clearAmount1 = By.xpath("//*[@id=\"amountRequiredEmiCal\"]");
+     public static By loanAmount1 = By.xpath("//*[@id=\"amountRequiredEmiCal\"]");
+     public static By loanAmountError = By.xpath("//*[@id=\"amountRequiredEmiCalError\"]");
+     public static By interestRate1 = By.xpath("//*[@id=\"interestRateEmiCal\"]");
+     public static By interestRateError = By.xpath("//*[@id=\"interestRateEmiCalError\"]");
+     
+     
 }

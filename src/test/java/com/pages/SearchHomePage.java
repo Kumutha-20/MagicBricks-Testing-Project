@@ -40,8 +40,8 @@ public class SearchHomePage {
 		  ((JavascriptExecutor) driver).executeScript("arguments[0].click();",locationBox1); 
 		  locationBox.clear(); 
 		  locationBox.sendKeys(location);
-		  WebElement locationBox2 =wait.until(ExpectedConditions.elementToBeClickable(Locators.selectdropdownLocation));
-		  ((JavascriptExecutor) driver).executeScript("arguments[0].click();",locationBox2); 
+		  //WebElement locationBox2 =wait.until(ExpectedConditions.elementToBeClickable(Locators.selectdropdownLocation));
+		  //((JavascriptExecutor) driver).executeScript("arguments[0].click();",locationBox2); 
 
 
 		  
