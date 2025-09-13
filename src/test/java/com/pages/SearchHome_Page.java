@@ -1,0 +1,152 @@
+package com.pages;
+
+import java.time.Duration;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
+
+import com.aventstack.extentreports.ExtentTest;
+import com.aventstack.extentreports.Status;
+import com.setup.Reporter;
+
+
+public class SearchHome_Page {
+	
+	//enter location
+	public static By clickLocation = By.xpath("//*[@id=\"keyword\"]");
+    public static By selectdropdownLocation = By.xpath("//*[@id=\"serachSuggest\"]/div[3]");
+    public static By crossloc =By.xpath("//*[@id=\"keyword_autoSuggestSelectedDiv\"]/div/div[2]");
+    //select property
+    public static By clearPropertyType = By.xpath("//*[@id=\"propType_buy\"]/div[2]/div/div/div[1]/div[2]/div[4]");
+    public static By clickPropertType = By.id("propType_buy");
+    public static By dropdownProperType = By.xpath("//*[@id=\"propType_buy\"]/div[1]");
+    public static By selectPropertyType = By.id("10002_10003_10021_10022");
+    public static By closePropertyType = By.xpath("//*[@id=\"buy_proertyTypeDefault\"]");
+    //select Budget
+    public static By clickBudget = By.xpath("//*[@id=\"rent_budget_lbl\"]");
+    public static By mindropdown=By.xpath("//*[@id=\"budgetMin\"]");
+    public static By maxdropdown=By.xpath("//*[@id=\"budgetMax\"]");
+    public static By closeBudget = By.xpath("//*[@id=\"rent_budget_lbl\"]");
+    public static By searchButton = By.xpath("//*[@id=\"searchFormHolderSection\"]/section/div/div[1]/div[3]/div[4]");
+    public static By TopAgents = By.xpath("//*[@id=\"body\"]/div[5]/div/div/div[1]/div[1]/ul/li[3]/a");
+
+    private WebDriver driver;
+    private WebDriverWait wait;
+    private ExtentTest extTest;
+
+    public SearchHome_Page(WebDriver driver, ExtentTest extTest) {
+        this.driver = driver;
+        this.wait = new WebDriverWait(driver, Duration.ofSeconds(15));
+        this.extTest = extTest;
+    }
+
+    // Enter location
+    public boolean enterLocation(String location) {
+    try {
+		  
+		  WebElement locationBox =
+		  wait.until(ExpectedConditions.elementToBeClickable(clickLocation));
+		  ((JavascriptExecutor) driver).executeScript("arguments[0].click();", locationBox); 
+		  WebElement locationBox1 =wait.until(ExpectedConditions.elementToBeClickable(crossloc));
+		  ((JavascriptExecutor) driver).executeScript("arguments[0].click();",locationBox1); 
+		  locationBox.clear(); 
+		  locationBox.sendKeys(location);
+		  WebElement locationBox2 =wait.until(ExpectedConditions.elementToBeClickable(selectdropdownLocation));
+		  ((JavascriptExecutor) driver).executeScript("arguments[0].click();",locationBox2); 
+
+
+		  
+		  Reporter.generateReport(driver, extTest, Status.PASS, "Entered location: " +
+		  location); return true; } catch (Exception e) {
+		  Reporter.generateReport(driver, extTest, Status.FAIL,
+		  "Failed to enter location: " + e.getMessage()); return false;
+		  
+	
+}
+}
+    public boolean selectPropertyType() {
+		try {
+			WebElement dropdown = wait.until(ExpectedConditions.elementToBeClickable(clickPropertType));
+			dropdown.click();
+
+		
+			WebElement option = wait.until(ExpectedConditions.elementToBeClickable(selectPropertyType));
+			((JavascriptExecutor) driver).executeScript("arguments[0].click();", option);
+			WebElement close = wait.until(ExpectedConditions.elementToBeClickable(closePropertyType));
+			((JavascriptExecutor) driver).executeScript("arguments[0].click();", close);
+			// close.click();
+
+			Reporter.generateReport(driver, extTest, Status.PASS, "Selected property type");
+			return true;
+		} catch (Exception e) {
+			Reporter.generateReport(driver, extTest, Status.FAIL, "Failed to select property type: " + e.getMessage());
+			return false;
+		}
+
+	}
+
+    // Select budget
+    public boolean selectBudget() {
+        try {
+            // Expand dropdown section if needed
+            WebElement dropdownSection = wait.until(ExpectedConditions.elementToBeClickable(clickBudget));
+            ((JavascriptExecutor) driver).executeScript("arguments[0].click();", dropdownSection);
+            
+            //Min dropdown
+            WebElement minOption = wait.until(ExpectedConditions.elementToBeClickable(mindropdown));
+            //minOption.clear();              
+            minOption.sendKeys("20000000");
+            minOption.click();
+
+            //Min dropdown
+            WebElement maxOption = wait.until(ExpectedConditions.elementToBeClickable(maxdropdown));
+            //maxOption.clear();              
+            maxOption.sendKeys("40000000");
+            maxOption.click();
+            WebElement closeOption = wait.until(ExpectedConditions.elementToBeClickable(closeBudget));
+            closeOption.click();
+
+            Reporter.generateReport(driver, extTest, Status.PASS,
+                    "Selected Budget successfully using dropdown (Min & Max)");
+            return true;
+
+        } catch (Exception e) {
+            Reporter.generateReport(driver, extTest, Status.FAIL, "Failed to select budget: " + e.getMessage());
+            return false;
+        }
+    }
+    // Click search
+    public boolean clickSearch() {
+        try {
+            WebElement searchBtn = wait.until(ExpectedConditions.elementToBeClickable(searchButton));
+            searchBtn.click();
+            Reporter.generateReport(driver, extTest, Status.PASS, "Clicked on Search button");
+            return true;
+        } catch (Exception e) {
+            Reporter.generateReport(driver, extTest, Status.FAIL, "Failed to click Search button: " + e.getMessage());
+            return false;
+        }
+    }
+
+    // Validate listing page
+    public boolean validateListingPage() {
+        try {
+            WebElement sortby = wait.until(ExpectedConditions.visibilityOfElementLocated(TopAgents));
+            if (sortby.isDisplayed()) {
+                Reporter.generateReport(driver, extTest, Status.PASS, "Listing page validated by Sort By dropdown");
+                return true;
+            } else {
+                Reporter.generateReport(driver, extTest, Status.FAIL, "Sort By dropdown not visible");
+                return false;
+            }
+        } catch (Exception e) {
+            Reporter.generateReport(driver, extTest, Status.FAIL, "Failed to validate listing page: " + e.getMessage());
+            return false;
+        }
+    }
+    
+}
