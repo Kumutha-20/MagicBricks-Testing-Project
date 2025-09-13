@@ -1,6 +1,6 @@
 package com.step_definition;
 
-import static org.testng.Assert.assertEquals;
+import org.testng.Assert;
 
 import com.aventstack.extentreports.ExtentTest;
 import com.pages.InvalidEmiCalculator_Page;
@@ -59,14 +59,14 @@ public class InvalidEmiCalculatorSteps extends BaseSteps {
     @Then("the user should see loan amount error message {string}")
     public void the_user_should_see_loan_amount_error_message(String expectedMessage) {
         String actualMsg =invalidemicalculatorpage.getLoanAmountError();
-        org.testng.Assert.assertEquals(actualMsg, expectedMessage, 
+        Assert.assertEquals(actualMsg, expectedMessage, 
             "Loan Amount Error Validation Failed!");
     }
 
     @Then("the user should see interest rate error message {string}")
     public void the_user_should_see_interest_rate_error_message(String expectedMessage) {
         String actualMsg =invalidemicalculatorpage.getInterestRateError();
-        org.testng.Assert.assertEquals(actualMsg, expectedMessage, 
+        Assert.assertEquals(actualMsg, expectedMessage, 
             "Interest Rate Error Validation Failed!");
     }
 

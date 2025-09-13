@@ -1,7 +1,6 @@
 package com.step_definition;
 
 
-import java.util.Scanner;
 import org.openqa.selenium.By;
 import org.testng.Assert;
 
