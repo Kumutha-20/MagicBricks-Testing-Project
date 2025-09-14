@@ -1,5 +1,7 @@
 Feature:Home loan EMI Calculator
 
+# Ts_MB_12 , Ts_MB_13
+
 Scenario:Calculating EMI Amount
 
 Given the user is on view propert details page

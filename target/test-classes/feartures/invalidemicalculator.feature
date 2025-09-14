@@ -4,6 +4,7 @@ Feature: Home Loan EMI Calculator Validation
   Background:
     Given the user is on the Home Loan EMI Calculator page
 
+# Ts_MB_14 , Ts_MB_15
   Scenario:Validate invalid loan amount error
  
     When I enters loan amount "5000"

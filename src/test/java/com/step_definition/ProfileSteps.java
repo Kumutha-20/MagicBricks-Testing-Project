@@ -20,12 +20,12 @@ public class ProfileSteps extends BaseSteps {
     public void startBrowser() {
         launchBrowser();
         driver.get("https://www.magicbricks.com/");
-        System.out.println("🔄 Browser launched fresh for InvalidLogin scenario");
+        System.out.println("Browser launched fresh for validLogin scenario");
     }
 
     @Given("I launch the magicbricks website")
     public void i_launch_the_magicbricks_website() {
-        // ✅ browser already launched in Hooks
+        // browser already launched in Hooks
         System.out.println("Browser launched via Hooks and Magicbricks website opened.");
     }
 

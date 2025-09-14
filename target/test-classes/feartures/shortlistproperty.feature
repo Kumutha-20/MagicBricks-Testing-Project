@@ -3,6 +3,7 @@ Feature: Shortlist property from listing page
 
 Background: Given the user is logged into the application
 
+# Ts_MB_08 , Ts_MB_09 , Ts_MB_10 , Ts_MB_11
 Scenario: Verify shortlisting a property from the listing results
 Given the user is on the property listing page
 And clicks on sortby and selects most recent filter

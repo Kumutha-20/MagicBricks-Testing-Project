@@ -5,6 +5,9 @@ Feature: MB Advice – Rates & Trends search
     And the user is on the MagicBricks home page
 
   @InvalidCity
+  
+  # Ts_MB_16
+  
   Scenario: Search without entering a city
     When the user clicks on MB Advice
     And the user clicks on Rates & Trends
@@ -13,6 +16,9 @@ Feature: MB Advice – Rates & Trends search
     Then an error message "Please enter a Location" should be displayed
 
   @ValidCity
+  
+  # Ts_MB_17
+  
   Scenario Outline: Search shows "Top 5 Localities" heading
     When the user clicks on MB Advice
     And the user clicks on Rates & Trends

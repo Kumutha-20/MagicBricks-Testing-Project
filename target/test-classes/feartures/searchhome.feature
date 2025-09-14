@@ -1,9 +1,10 @@
-
-
 Feature: Magicbricks Property Search
 
 Background:
      Given the user is on the Magicbricks home page
+     
+     # Ts_MB_04 , Ts_MB_06 , Ts_MB_07
+     
   Scenario Outline: Search and validate property listings by location
     Given the user is on the Magicbricks home page
     When the user enters "<location>" in the Search bar
